@@ -1,0 +1,168 @@
+/* Container principal */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Lado esquerdo */
+.login-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.login-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Ajuste da classe login-left para melhorar o layout */
+.login-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Colocar os elementos em uma coluna */
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    padding: 40px;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Ajuste no título e parágrafo */
+.login-left h2 {
+    font-size: 2.5rem; /* Tamanho adequado para o título */
+    margin-bottom: 15px; /* Maior espaço entre o título e o parágrafo */
+    font-weight: bold;
+}
+
+.login-left p {
+    font-size: 1.2rem;
+    margin-bottom: 30px; /* Espaço extra antes da imagem */
+}
+
+/* Ajuste na imagem */
+.login-left-image {
+    max-width: 70%; /* Limitar o tamanho da imagem */
+    height: auto;
+    object-fit: contain;
+    margin-top: 20px; /* Espaço entre o texto e a imagem */
+}
+
+
+/* Lado direito */
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f9;
+}
+
+/* Cartão de login */
+.login-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título do formulário */
+.login-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos para os campos de input */
+.input-field {
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.input-field:focus {
+    border-color: #2575fc;
+}
+
+.login-button {
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #2575fc;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #1e60c0;
+}
+
+
+/* Botão de registro */
+.register-button-loginpage {
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #2575fc;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
+    color: #2575fc;
+    transition: background-color 0.3s, box-shadow 0.3s ease;
+}
+
+.register-button-loginpage:hover {
+    background: #2575fc;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-left {
+        padding: 20px;
+    }
+}
