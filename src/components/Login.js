@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css';
-import '../assets/undraw_team-up_qeem.svg'; // Caminho correto da imagem
+import '../assets/undraw_team-up_qeem.svg';
+import { jwtDecode } from 'jwt-decode';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -19,8 +20,20 @@ const Login = () => {
         })
         .then(response => {
             const token = response.data.token;
+            const decodedToken = jwtDecode(token);
+            console.log(decodedToken);
+            const role = decodedToken.role;
             localStorage.setItem('authToken', token);
-            navigate('/tickets');
+
+            if (role === 'empresa') {
+                navigate('/dashboard'); 
+            } else if (role === 'cliente') {
+                navigate('/tickets'); 
+            } else if (role === 'suporte') {
+                navigate('/tickets'); 
+            } else {
+                navigate('/home'); 
+            }
         })
         .catch(() => {
             setError('Credenciais inválidas');

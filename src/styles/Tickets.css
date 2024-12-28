@@ -157,3 +157,149 @@ h1 {
     background: #aaa;
     cursor: not-allowed;
 }
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.ticket-footer {
+    display: flex;
+    justify-content: space-between; /* Alinha as badges e o link */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.badge.status {
+    background-color: #90a4ae; /* Cor mais suave para status */
+}
+
+.badge.priority {
+    background-color: #7986cb; /* Cor mais suave para prioridade */
+}
+
+/* Status badges */
+.badge.open {
+    background-color: #e57373;
+}
+
+.badge.in-progress {
+    background-color: #ffb74d;
+}
+
+.badge.completed {
+    background-color: #81c784;
+}
+
+/* Prioridade badges */
+.badge.low-priority {
+    background-color: #fdd835;
+}
+
+.badge.medium-priority {
+    background-color: #ffb300
+}
+
+.badge.high-priority {
+    background-color: #e57373;
+}
+
+
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Groups */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-field {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    min-width: 100%;
+}
+
+textarea.input-field {
+    resize: vertical;
+    max-height: 200px; /* Limita o tamanho do textarea */
+}
+
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+}
+
+.cancel-btn:hover {
+    background-color: #bbb;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
